@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js/Include.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body onload="LoadExtraHtml('home','chat','profile','search')">
-    <div id="HOME"></div>
-    <div id="CHAT"></div>
-    <div id="PROFILE"></div>
-    <div id="SEARCH"></div>
+    <div id="nav-bar">  </div>
+    <div id="page">
+        <div id="HOME"></div>
+        <div id="CHAT"></div>
+        <div id="PROFILE"></div>
+        <div id="SEARCH"></div>
+    </div>
 </body>
+<script>
+    let currentIDs=['HOME','CHAT','PROFILE','SEARCH'];
+
+    function setActive(id){
+        for(let i=0;i<currentIDs.length;i++){
+            if(id==i){
+                document.getElementById(currentIDs[i]).style.display="block";
+                continue;
+            }  
+            document.getElementById(currentIDs[i]).style.display="none";
+        }
+    }
+    setActive(3);
+</script>
 </html>
