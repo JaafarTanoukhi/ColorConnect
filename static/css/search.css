@@ -32,7 +32,7 @@
     border-color: var(--secondary);
     font-size: 18pt;
     font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 3px 3px 3px 3px var(--accent); 
+    box-shadow: 3px 3px 1px 1px var(--accent); 
 }
 
 #search-bar:focus{
@@ -60,4 +60,19 @@ margin:auto auto auto auto;
     width:fit-content;
     height:fit-content;
     opacity:50%;
+}
+
+#parallax-container{
+    height:50%;
+   overflow-x: scroll;
+   overflow-y:none;
+   white-space: nowrap;
+}
+
+.S-account-container{
+    display: inline-block;
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    background-color: red;
 }
