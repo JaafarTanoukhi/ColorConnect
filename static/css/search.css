@@ -1,9 +1,9 @@
 :root{
-    --text: #040506;
-    --background: #f9f9fb;
-    --primary: #b7b0c9;
-    --secondary: #d1c2d6;
-    --accent: #715379;
+    --text: #020906;
+    --background: #e5faf4;
+    --primary: #a4e1ef;
+    --secondary: #f4becf;
+    --accent: #c34022;
 }
 
 #SEARCH{
@@ -65,7 +65,7 @@ margin:auto auto auto auto;
 #S-parallax-container{
     height:85%;
     padding: 5px;
-   overflow-x: scroll;
+   overflow-x: hidden;
    overflow-y:hidden;
    white-space: nowrap;
    perspective: 10px;
@@ -84,8 +84,8 @@ margin:auto auto auto auto;
 }
 
 .S-account-container{
-    width:75px;
-    height:75px;
+    width:150px;
+    height:150px;
     border-radius: 100%;
     margin:auto;
     background-size: cover;
@@ -97,6 +97,6 @@ margin:auto auto auto auto;
 
 .S-account-container:hover{
     transform: translateZ(0px);
-    width:125px;
-    height:125px;
+    width:200px;
+    height:200px;
 }
