@@ -8,5 +8,37 @@ function LoadExtraHtml(...names){
 }
 
 function fetch_write(Filename){
-    fetch("../html/"+Filename+".html").then(response=>response.text()).then(content=>document.getElementById(Filename.toUpperCase()).insertAdjacentHTML("afterbegin",content));
+    let extractedScripts=[];
+    fetch("../html/"+Filename+".html")
+    .then(response=>response.text())
+    .then(content=>{
+        document.getElementById(Filename.toUpperCase())
+        .insertAdjacentHTML("afterbegin",content);
+        evalScripts(content);
+});
+
+    
 }
+
+async function evalScripts(inputString) {
+    const tempElement = document.createElement('div');
+    tempElement.innerHTML = inputString;
+  
+    const scriptElements = tempElement.querySelectorAll('script');
+  
+    for (const script of scriptElements) {
+      if (script.src) {
+        try {
+          const response = await fetch(script.src);
+          const scriptContent = await response.text();
+          eval(scriptContent);
+        } catch (error) {
+          console.error(`Error loading script from "${script.src}":`, error);
+        }
+      } else {
+        eval(script.innerHTML);
+      }
+    }
+  }
+  
+

@@ -62,15 +62,25 @@ margin:auto auto auto auto;
     opacity:50%;
 }
 
-#parallax-container{
-    height:50%;
+#S-parallax-container{
+    height:85%;
+    padding: 5px;
    overflow-x: scroll;
-   overflow-y:none;
+   overflow-y:hidden;
    white-space: nowrap;
+   perspective: 10px;
+}
+
+.S-account-column{
+    margin:10px;
+    display:inline-block;
+    height:100%;
+    width:25%;   
+    transform-style: preserve-3d;
+    
 }
 
 .S-account-container{
-    display: inline-block;
     width:100px;
     height:100px;
     border-radius: 100%;
