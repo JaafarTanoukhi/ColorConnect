@@ -73,7 +73,10 @@ margin:auto auto auto auto;
 
 .S-account-column{
     margin:10px;
-    display:inline-block;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
     height:100%;
     width:25%;   
     transform-style: preserve-3d;
@@ -81,8 +84,19 @@ margin:auto auto auto auto;
 }
 
 .S-account-container{
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
     border-radius: 100%;
-    background-color: red;
+    margin:auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: width 300ms ease-in-out;
+    transition: height 150ms ease-in-out;
+}
+
+.S-account-container:hover{
+    transform: translateZ(0px);
+    width:125px;
+    height:125px;
 }

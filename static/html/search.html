@@ -14,40 +14,48 @@
         <div class="S-account-container"></div>
         <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
-    </div>   
-    <div class="S-account-column">
-        <div class="S-account-container"></div>
-        <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
     </div>   
     <div class="S-account-column">
         <div class="S-account-container"></div>
         <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
-    </div>   
-    <div class="S-account-column">
-        <div class="S-account-container"></div>
-        <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
     </div>   
     <div class="S-account-column">
         <div class="S-account-container"></div>
         <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
-    </div>   
-    <div class="S-account-column">
-        <div class="S-account-container"></div>
-        <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
     </div>   
     <div class="S-account-column">
         <div class="S-account-container"></div>
         <div class="S-account-container"></div>
         <div class="S-account-container" ></div>
+        <div class="S-account-container" ></div>
     </div>   
     <div class="S-account-column">
         <div class="S-account-container"></div>
         <div class="S-account-container"></div>
+        <div class="S-account-container" ></div>
+        <div class="S-account-container" ></div>
+    </div>   
+    <div class="S-account-column">
+        <div class="S-account-container"></div>
+        <div class="S-account-container"></div>
+        <div class="S-account-container" ></div>
+        <div class="S-account-container" ></div>
+    </div>   
+    <div class="S-account-column">
+        <div class="S-account-container"></div>
+        <div class="S-account-container"></div>
+        <div class="S-account-container" ></div>
+        <div class="S-account-container" ></div>
+    </div>  
+    <div class="S-account-column">
+        <div class="S-account-container"></div>
+        <div class="S-account-container"></div>
+        <div class="S-account-container" ></div>
         <div class="S-account-container" ></div>
     </div>    
 </div>
@@ -56,5 +64,15 @@
     function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
+
+  let containers=[...document.getElementsByClassName('S-account-container')];
+  containers.forEach(container=>{
+      const randX=rand(-50,50);
+      const randY=rand(-25,25);
+      const randZ=rand(-10,0);
+      const randImage=rand(1,12);
+        container.style.transform=`translate(${randX}%,${randY}%)`;
+        container.style.transform=`translateZ(${randZ}px) scale(1.2)`;
+        container.style.backgroundImage=`url(../images/${randImage}.png)`
+    });
 </script>
