@@ -1,37 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../js/Include.js"></script>
     <link rel="stylesheet" href="../css/index.css">
-    
+    <link rel="stylesheet" href="../css/nav.css">
+
+    <!-- Icon SCRIPT-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body onload="LoadExtraHtml('home','chat','profile','search')">
-    <div id="nav-bar">  </div>
+    <div id="nav-bar">
+        <div class="toggle">
+
+        </div>
+
+        <div class="h-navigation">
+            <ul>
+                <li class="h-logo" style="--bg:#333;">
+                    <a href="#">
+                    </a>
+                </li>
+                <li class="list h-active" style="--bg:#f44336;">
+                    <a href="#">
+                        <span class="h-icon"><ion-icon name="home-outline"></ion-icon> </span>
+                        <span class="h-title">Home</span>
+                    </a>
+                </li>
+                <li class="list" style="--bg:#ffa117;">
+                    <a href="#">
+                        <span class="h-icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <span class="h-title">Profile</span>
+                    </a>
+                </li>
+                <li class="list" style="--bg:#0fc70f;">
+                    <a href="#">
+                        <span class="h-icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                        <span class="h-title">Message</span>
+                    </a>
+                </li>
+                <li class="list" style="--bg:#2196f3;">
+                    <a href="#">
+                        <span class="h-icon"><ion-icon name="search-outline"></ion-icon></span>
+                        <span class="h-title">Search</span>
+                    </a>
+                </li>
+                <li class="list" style="--bg:purple;">
+                    <a href="#">
+                        <span class="h-icon"><ion-icon name="exit-outline"></ion-icon></span>
+                        <span class="h-title">Exit</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div id="page">
         <div id="HOME"></div>
         <div id="CHAT"></div>
         <div id="PROFILE"></div>
         <div id="SEARCH"></div>
     </div>
-    </body>
+</body>
 
-    <script>
-    let currentIDs=['HOME','CHAT','PROFILE','SEARCH'];
-    
-    function setActive(id){
-        for(let i=0;i<currentIDs.length;i++){
-            if(id==i){
-                document.getElementById(currentIDs[i]).style.display="block";
+<script>
+    let currentIDs = ['HOME', 'CHAT', 'PROFILE', 'SEARCH'];
+
+    function setActive(id) {
+        for (let i = 0; i < currentIDs.length; i++) {
+            if (id == i) {
+                document.getElementById(currentIDs[i]).style.display = "block";
                 continue;
-            }  
-            document.getElementById(currentIDs[i]).style.display="none";
+            }
+            document.getElementById(currentIDs[i]).style.display = "none";
         }
     }
-    setActive(3);
+
+
+//NAV BAR SCRIPT
+
+        
+    let menuToggle = document.querySelector('.toggle');
+    let sidebar = document.querySelector('.h-navigation')  
+    menuToggle.onclick = function(){
+        menuToggle.classList.toggle('h-active')
+        sidebar.classList.toggle('h-active')
+    }
+    //add acticve class in select
+    let list = document.querySelectorAll('.list')
+    for(let i=0; i<list.length; i++){
+        list[i].onclick = function(){
+            let j = 0;
+            while(j< list.length){
+                list[j++].className = 'list';
+            }
+            list[i].className = 'list h-active';
+            setActive(i);
+        }
+    }
 </script>
+
 </html>
