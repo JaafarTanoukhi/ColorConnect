@@ -70,10 +70,20 @@
         const randX = rand(-50, 50);
         const randY = rand(-25, 25);
         const randZ = rand(-10, 0);
-        const randImage = rand(1, 12);
+        const randImage = rand(1, 11);
         container.style.transform = `translate(${randX}%,${randY}%)`;
         container.style.transform = `translateZ(${randZ}px) scale(1.2)`;
         container.style.backgroundImage = `url(../images/${randImage}.png)`
+        container.dataset.number=randImage;
+        
+        var audio;
+        container.addEventListener('mouseover',()=>{
+         audio=new Audio(`../images/${container.dataset.number}.mp3`);
+         audio.play();
+        });
+        container.addEventListener('mouseout',()=>{
+            audio.pause();
+        });
     });
 </script>
 
