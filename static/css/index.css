@@ -16,9 +16,17 @@ body{
 
 }
 #nav-bar{
-    position:sticky;
+    position:absolute;
     left:0;
     height:100%;
     width:10%;
     background-color: black;
+    z-index: 9999;
 }
+
+
+
+
+
+
+ 

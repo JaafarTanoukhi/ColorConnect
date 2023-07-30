@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins',sans-serif;
+}
+:root{
+    --clr: #14161e;
+}
+
+.h-navigation{
+    position: absolute;
+    width: 80px;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    padding-left: 10px;
+   overflow: hidden;
+}
+.h-navigation.h-active{
+    width: 300px;
+}
+.h-navigation ul{
+    position: relative;
+    height: 100vh;
+}.h-navigation ul li{
+    position: relative;
+    list-style: none;
+}
+.h-navigation ul li.h-logo{
+    margin-top: 50px;
+}
+
+
+
+
+/*the transparent background for the buttons
+with it curves*/
+.h-navigation ul li.h-active{
+    background-color: var(--clr);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}.h-navigation ul li.h-active::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0 5px var(--clr);
+    background-color: transparent;
+}.h-navigation ul li.h-active::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px -5px 0 5px var(--clr);
+    background-color: transparent;
+}
+
+
+
+
+
+.h-navigation ul li.h-active .h-icon{
+    color: #fff;
+}.h-navigation ul li.h-active .h-title{
+    color: var(--bg);
+}
+.h-navigation ul li .h-icon{
+    font-size: 2em;
+    color: var(--clr);
+}.h-navigation ul li .h-title{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--clr);
+}.h-navigation ul li a{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}.h-navigation ul li a .h-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    padding-left: 10px;
+    height: 70px;
+    font-size: 1.5em;
+    color: #333;
+    transition: 0.5s;
+}.h-navigation ul li a .h-title{
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #333;
+    padding-left: 15px;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}.h-navigation ul li:hover a .h-icon, .h-navigation ul li:hover a .h-title{
+    color: var(--bg);
+}
+
+
+.h-navigation ul li.h-active .h-icon::before{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    width: 60px;
+    background: var(--bg);
+    border-radius: 50%;
+    transition: 0.5s;
+
+}
+.h-navigation ul li:hover.h-active .h-icon::before{
+    background: #fff;
+}
+
+
+
+
+/*THE BLUE BOX IN THE CORNER THAT TOGGLES THE NAV BAR */
+.toggle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #31a4ff;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.toggle::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    transform: translateY(-9px);
+    transition: 0.5s;
+    box-shadow: 0 9px 0 #fff;
+}.toggle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    transform: translateY(9px);
+    transition: 0.5s;
+}
+.toggle.h-active::before{
+    transform: translateY(0px) rotate(45deg); 
+    box-shadow: 0 0 0 #fff;
+
+}.toggle.h-active::after{
+    transform: translateY(0px) rotate(-45deg); 
+}
