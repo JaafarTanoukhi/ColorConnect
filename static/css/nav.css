@@ -18,7 +18,7 @@
    overflow: hidden;
 }
 .h-navigation.h-active{
-    width: 300px;
+    width: 200px;
 }
 .h-navigation ul{
     position: relative;

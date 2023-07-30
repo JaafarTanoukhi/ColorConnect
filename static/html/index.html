@@ -8,7 +8,7 @@
     <script src="../js/Include.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/nav.css">
-
+    
     <!-- Icon SCRIPT-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -16,12 +16,8 @@
 
 <body onload="LoadExtraHtml('home','chat','profile','search')">
     <div id="nav-bar">
-        <div class="toggle">
-
-        </div>
-
-        <div class="h-navigation">
-            <ul>
+            <div class="h-navigation">
+                <ul>
                 <li class="h-logo" style="--bg:#333;">
                     <a href="#">
                     </a>
@@ -65,6 +61,8 @@
         <div id="PROFILE"></div>
         <div id="SEARCH"></div>
     </div>
+
+    <div class="toggle"></div>
 </body>
 
 <script>
@@ -80,12 +78,14 @@
         }
     }
 
+    setActive(0);
+
 
 //NAV BAR SCRIPT
 
         
     let menuToggle = document.querySelector('.toggle');
-    let sidebar = document.querySelector('.h-navigation')  
+    let sidebar = document.querySelector('.h-navigation') 
     menuToggle.onclick = function(){
         menuToggle.classList.toggle('h-active')
         sidebar.classList.toggle('h-active')

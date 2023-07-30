@@ -16,13 +16,19 @@ body{
 
 }
 #nav-bar{
-    position:absolute;
-    left:0;
+    margin-left: 0;
     height:100%;
-    width:10%;
-    background-color: black;
-    z-index: 9999;
+    width:18%;
+    z-index: 0;
+    background-color: #14161e;
 }
+
+#page{
+    height:100%;
+    width:82%;
+}
+
+
 
 
 
