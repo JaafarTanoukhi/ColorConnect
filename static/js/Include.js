@@ -2,6 +2,7 @@
 
 //theres a chance different files use different css stylesheets which may lead to 
 //css collisions. make sure to use different selectors
+
 function LoadExtraHtml(...names){
     for(let i=0;i<names.length;i++)
     fetch_write(names[i]);
