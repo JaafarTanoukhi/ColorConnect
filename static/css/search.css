@@ -132,19 +132,17 @@ background-size: cover;
 }
 
 
-
-
-
-
-
-
-
-
 /* PROFILE CARD WITH all ITS OPTION*/
+
+.card-wrapper{
+  position: relative;
+}
 .wrapper,.wrapper .img-area,.social-icons a,.buttons button{
-    background: white;
+    background-color: white;
     box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
 }
+
+
 
 .wrapper{
   position: relative;
@@ -155,7 +153,8 @@ background-size: cover;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 1;
+ z-index: 2;
+  background-color:white
 }
 .wrapper .icon{
   font-size: 17px;
@@ -302,28 +301,30 @@ background-size: cover;
 
 /* OPTION SECTION BEHIND THE POST CARD*/
 
-.p-option {
+.visit-box{
   position: absolute;
-  top: 25%;
-  right: 0;
-  transform: translate(0rem, -50%);
-  width: 8rem;
-  height: 10rem;
-  padding: 1rem 2rem 1rem 1rem;
-  box-sizing: border-box;
-  border-radius: 1rem;
-  cursor: pointer;
-  background: white;
-  box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 2rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
-  transition: transform 500ms;
-  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-35px);
+  transition: 0.3s ease-in-out;
+  left:25%;
+  width:50%;
+  height:50px;
+  z-index:1 ;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color:#31a4ff;
+  font-size: 1.2rem;
 }
-.p-option h2 {
-  margin: 0.5rem 0 1.5rem 5rem;
+
+.visit-box:hover{
+  background-color:#31a4ff;
+  color:white;
+  transform: translateY(-10px);
+  cursor:pointer;
 }
-.p-option .contact:last-child {
-  margin: 0;
-}
+
 
 
 
