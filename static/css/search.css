@@ -14,3 +14,85 @@
     overflow:hidden;
 }
 
+#search-section{
+    background-color: blue;
+    display:grid;
+    height:25%;
+}
+
+#search-bar{
+    position: relative;
+    background-color: red;
+    margin:auto;
+    width:70%;
+    height:50%;
+    display:grid;
+}
+
+#search-text{
+    width:100%;
+    height:50%;
+    background-color: yellow;
+    margin:auto;
+}
+
+#search-submit{
+    position:absolute;
+    background-color:green;
+    right:1%;
+    top:30%;
+    width:30px;
+    height:30px;
+    display:grid;
+}
+
+#cards-container{
+    background-color:black;
+    display:block;
+    max-height:100%;
+    padding:20px;
+}
+
+.card-group{
+    background-color: white;
+    display:flex;
+    height:300px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    background-color:purple;
+   height:250px;
+   width:200px;
+    border-radius: 10px;
+}
+
+.s-profile-pic-container{
+    height:100px;
+    display:grid;
+    background-color: black;
+}
+
+.s-profile-pic{
+height:50px;
+width:50px;
+margin:auto;
+border-radius: 100%;
+background-color:white;
+}
+
+.s-profile-info-container{
+    display:flex;
+    height:100px;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.s-profile-status-container{
+    height:50px;
+    text-align: center;
+    background-color: yellow;
+}
