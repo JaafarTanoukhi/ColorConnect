@@ -60,7 +60,12 @@ margin:auto auto auto auto;
     width:fit-content;
     height:fit-content;
     opacity:50%;
+    cursor: pointer;
 }
+#bar-button-container #search-button:hover{
+    cursor: pointer;
+}
+
 
 #S-parallax-container{
     height:85%;
