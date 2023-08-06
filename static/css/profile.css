@@ -1,7 +1,7 @@
 .center {
     position: absolute;
-    top: 50%;
-    left: calc(40% + 12rem);
+    top: 48%;
+    left: calc(45% + 12rem);
     transform: translate(-50%, -50%);
   }
   
@@ -62,7 +62,7 @@
   border-radius: 1rem;
   top: 0;
   right: 2.5rem;
-  background: #333;
+  background:#0fc70f;
   color: white;
 }
 .contacts {
@@ -86,11 +86,11 @@
   .contacts .fa-bars {
     position: absolute;
     right: 2.25rem;
-    color: #999;
+    color: #0fc70f;
     transition: color 200ms;
   }
   .contacts .fa-bars:hover {
-    color: #666;
+    color:#0fc70f;
   }
   .contacts .contact:last-child {
     margin: 0;
@@ -110,8 +110,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40rem;
-    height: 47.5rem;
+    width: 60.41876rem;
+    height: 50rem;
     z-index: 2;
     box-sizing: border-box;
     border-radius: 1rem;
@@ -125,8 +125,8 @@
     box-sizing: border-box;
   }
   .chat .messages {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
     background: #F7F7F7;
     flex-shrink: 2;
     overflow-y: auto;
@@ -142,6 +142,7 @@
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
   .chat .messages .message {
     box-sizing: border-box;
