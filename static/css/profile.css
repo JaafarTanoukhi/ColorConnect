@@ -1,3 +1,8 @@
+#PROFILE{
+  height:100vh;
+  overflow: auto;
+}
+
 .center {
     position: absolute;
     top: 48%;
