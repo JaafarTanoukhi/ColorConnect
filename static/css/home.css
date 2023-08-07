@@ -1,19 +1,16 @@
 #home-title {
-    background-color: red;
     height: 5rem;
     margin-top: 2rem;
-    color: white;
+    color: black;
     font-size: 5rem;
 }
 
 #home-container {
     display: flex;
-    background-color: black;
 }
 
 #posts {
     position: relative;
-    background-color: yellow;
     height: 90vh;
     width: 60%;
     display:flex;
@@ -21,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     overflow-y:scroll;
+    overflow-x: hidden;
     scroll-snap-type:y mandatory;
 }
 
@@ -45,7 +43,6 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
     height: 50vh;
     width: 40%;
     overflow-x: scroll;
@@ -76,37 +73,51 @@
     flex:0 0 auto;
     width: 80%;
     height: 80%;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
 }
 
 .p-account-info {
     display: flex;
     width: 100%;
     height: 100px;
-    background-color: blue;
 }
 
 .p-account-image {
-    height: 100px;
-    width: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
     border-radius: 100%;
-    border: 2px solid black;
-    background-color: red;
+    background-image:url(../images/9.png);
+    margin:10px 0 10px 10px;
+    background-size: cover;
+    
 }
 
 .p-account-name {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
     width: 50%;
     height: 100px;
-    background-color: red;
+    font-size: 2rem;
 }
 
 .image {
     width: 90%;
     height: 70%;
-    background-color: purple;
     align-self: center;
+    background-image: url(../images/8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid grey;
+    border-radius: 20px;
 }
 
 .actions {
@@ -120,45 +131,71 @@
 .action-button {
     width: 50px;
     height: 50px;
+    color:black;
+    background-color: transparent;
+    border: none;
 }
+
+.action-button:hover{
+    cursor: pointer;
+    color:red;
+}
+
+
 
 .like-comment-container {
     display: flex;
 }
 
 .caption {
+    display: flex;
+    align-items: center;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    font-size: 1.5rem;
     height: 50px;
 }
 
 .story{
     flex:0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     scroll-snap-align: center;
-    background-color: purple;
-    width:100%;
-    height:100%;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width:90%;
+    height:90%;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .s-account-info{
     display:flex;
+    width:100%;
    height:75px;
-   background-color: black;
+   justify-content: flex-start;
+   align-items: center;
 }
 
 .s-account-image{
     width:75px;
     height:75px;
+    background-image: url(../images/1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 100%;
-    background-color: red;
+    
 }
 
 .s-account-name{
     width:50%;
     height:75px;
-    background-color: blue;
+    font-size: 2rem;
+    margin-top: 30px;;
 }
 
 .story-image{
@@ -168,13 +205,28 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width:100%;
-    height:100%;
-    background-color: grey;
+    width:80%;
+    height:80%;
+    background-image: url(../images/civilwar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid grey;
+    border-radius: 20px;
 }
 
 .story-like{
-    margin-bottom: 20px;
+    width:50px;
+    height:50px;
+    align-self: flex-end;
+    font-size: large;
+    background-color: transparent;
+    border: none;
+}
+
+.story-like:hover{
+    color:red;
+    cursor: pointer;
 }
 
 
