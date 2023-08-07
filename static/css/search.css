@@ -330,7 +330,16 @@ background-size: cover;
 }
 
 
+@media all and(max-width:700px){
+  .card-group{
+    position: relative;
+    display:flex;
+    height:500px;
+    justify-content: space-around;
+    align-items: center;
+}
 
+}
 
 
 
