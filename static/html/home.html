@@ -1,20 +1,39 @@
 <link rel="stylesheet" href="../css/home.css">
 
-<div id="home-title">COLOR CONNECT</div>
+<div id="home-title">
+    <span class="redti">C</span>
+    <span class="orangeti">O</span>
+    <span class="blueti">L</span>
+    <span class="orangeti">O</span>
+    <span class="blueti">R</span>
+    <span class="redti">C</span>
+    <span class="orangeti">O</span>
+    <span class="greenti">N</span>
+    <span class="greenti">N</span>
+    <span class="blueti">E</span>
+    <span class="redti">C</span>
+    <span class="blueti">T</span>
+</div>
 
 <div id="home-container">
 
 
     <div id="posts">
+
+        
         <div class="post">
             <div class="p-account-info">
                 <div class="p-account-image"></div>
                 <div class="p-account-name">Andrew Tate</div>
             </div>
-            <div class="image"></div>
+            <div class="image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
+                <img src="../images/8.png" alt="insta-post" class="insta-post"  style="width: 100%; height: 100%;"/>
+                
+            </div>
             <div class="actions">
                 <div class="like-comment-container">
-                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
+                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button><p class="likes"></p>
                     <button class="action-button comment"><ion-icon size="large" name="chatbox-outline"></ion-icon></button>
                 </div>
                 <button class="action-button share"><ion-icon size="large" name="share-outline"></ion-icon></button>
@@ -22,12 +41,17 @@
             <div class="caption"><span style="width:50px;height:50px;" class="p-account-image"></span><span style="margin-left:5px">AndrewTate: greatest movie of all time.</span></div>
             <div class="comments"></div>
         </div>
+
+
         <div class="post">
             <div class="p-account-info">
                 <div class="p-account-image"></div>
                 <div class="p-account-name">Andrew Tate</div>
             </div>
-            <div class="image"></div>
+            <div class="image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
+                <img src="../images/8.png" alt="insta-post" class="insta-post"  style="width: 100%; height: 100%;"/>
+            </div>
             <div class="actions">
                 <div class="like-comment-container">
                     <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
@@ -119,3 +143,28 @@
         
     </div>
 </div>
+
+
+<script>
+    const post = document.querySelector(".post");
+const likesEl = document.querySelector(".likes");
+const heart = document.querySelector(".heart-icon");
+
+likesEl.innerText = "There are no likes so far";
+
+let counter = 0;
+
+post.addEventListener("dblclick", (e) => {
+  counter++;
+
+
+  if (counter === 1) likesEl.innerText = counter + " like";
+  else likesEl.innerText = counter + " likes";
+
+  heart.classList.add("animate-like");
+  setTimeout(() => {
+    heart.classList.remove("animate-like");
+  }, 800);
+});
+
+</script>
