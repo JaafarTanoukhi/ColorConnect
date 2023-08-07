@@ -182,7 +182,6 @@
 
 <script>
     const stories=document.getElementsByClassName('stories');
-    console.log(stories);
     Array.from(stories).forEach(s=>{s.addEventListener("dblclick", (e) => {
     const story=e.target.closest('.story');
     if(!story) return;
@@ -200,5 +199,32 @@
 
 <script>
     let names=['loula','Jaafar','Ali','Jeff','Tonny','Steve Rogers','Bruce Banner','Thor Odinson','Peter Parker'];
-    let captions=['loula','Jaafar','Ali','Jeff','Tonny','Steve Rogers','Bruce Banner','Thor Odinson','Peter Parker'];
+
+    function rand(min, max) {
+        // Add 1 to the difference between max and min
+        // Then multiply the result by Math.random()
+        // Finally, take the floor value to get an integer within the range
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+        
+    let account_image=document.querySelectorAll('.p-account-image');
+    let account_name=document.querySelectorAll('.p-account-name');
+    let post_image=document.querySelectorAll('.insta-post');
+    let captions=document.querySelectorAll('.caption');
+    
+    let story_image=document.querySelectorAll('.s-account-image');
+    let story_name=document.querySelectorAll('.s-account-name')
+    let story_post=document.querySelectorAll('.story-image');
+
+    
+        Array.from(account_image).forEach(image=>image.style.backgroundImage=`url(../images/${rand(1,8)}.png)`);
+        Array.from(account_name).forEach(name=>name.innerText=names[rand(0,8)]);
+        Array.from(post_image).forEach(image=>image.src=`../Posts/${rand(1,12)}.jpg`);
+        Array.from(captions).forEach(caption=>caption.innerText=names[rand(0,8)]);
+        Array.from(story_image).forEach(image=>image.style.backgroundImage=`url(../images/${rand(1,8)}.png)`);
+        Array.from(story_name).forEach(name=>name.innerText=names[rand(0,8)]);
+        Array.from(story_post).forEach(post=>post.style.backgroundImage=`url(../Posts/${rand(1,12)}.jpg`);
+        
+     
 </script>

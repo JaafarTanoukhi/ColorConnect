@@ -48,7 +48,7 @@
     display:none;
 }
 
-#stories::-webkit-scrollbar{
+.stories::-webkit-scrollbar{
     display:none;
 }
 

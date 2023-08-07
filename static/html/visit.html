@@ -18,7 +18,7 @@
 
         <div class="profile-image">
           <div class="image-circle">
-          <img src="../images/peterparker.jpg" alt="">
+          <img style="width:80%;height:80%" id="profile-pic" alt="">
         </div>
         </div>
         
@@ -44,7 +44,7 @@
 
         <div class="profile-bio">
 
-          <p><span id="bio" class="profile-real-name">Peter Benjamin Parker</span> <br> With Great Power comes Great responsibility 📷&#128375; &#128376;</p>
+          <p><span id="bio" class="profile-real-name"></span></p>
 
         </div>
 
@@ -303,20 +303,22 @@
     let posts=document.getElementById('posts');
     let bio=document.getElementById('bio');
     let images=document.getElementsByClassName('gallery-image');
+    let profile_pic=document.getElementById('profile-pic');
 
-    let names=['Ali Hotiet','Jaafar Tanoukhi','Loulaa',"JefShooter"];
+    let names=['Ali Hotiet','Jaafar Tanoukhi','Loulaa',"Jeff"];
     let bios=['Life could be free, life could be free',
-              'Marvel movies are gay',
-              'Baby dont hurt me dont hurt me'];
+              'Marvel movies are cool',
+              'Baby dont hurt me, dont hurt me, no more'];
 
     document.addEventListener('DOMContentLoaded',()=>{
         name.innerHTML=names[rand(0,3)];
         followers.innerHTML=rand(0,1000);
         following.innerHTML=rand(0,1000);
         posts.innerHTML=rand(0,1000);
-        bio.innerHTML=names[rand(0,3)];
+        profile_pic.src=`../images/${rand(1,8)}.png`;
+        bio.innerText=bios[rand(0,2)];
         Array.from(images).forEach(image=>{
-            image.setAttribute('src', `../images/${rand(0,10)}.png`);
+            image.setAttribute('src', `../posts/${rand(1,12)}.jpg`);
         });
     });
 
