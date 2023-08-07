@@ -53,7 +53,7 @@
 }
 
 
-#stories {
+.stories {
     position: relative;
     display:flex;
     justify-content: space-between;
@@ -110,6 +110,7 @@
 }
 
 .image {
+    position:relative;
     width: 90%;
     height: 70%;
     align-self: center;
@@ -137,8 +138,8 @@
 }
 
 .action-button:hover{
-    cursor: pointer;
     color:red;
+    cursor: pointer;
 }
 
 
@@ -203,6 +204,7 @@
 
 .story-image{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: flex-end;
     background-repeat: no-repeat;
@@ -254,7 +256,7 @@
     transform: translate(-50%, -50%);
     filter: drop-shadow(0 19px 38px rgba(0, 0, 0, 0.7));
     transform-origin: center center;
-    width: 0;
+    width:0;
   }
 
  
