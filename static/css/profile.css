@@ -270,3 +270,36 @@
     margin-top: 20px;
     opacity: 0.4;
   }
+
+
+
+
+  /* Base styles for all screen sizes */
+
+
+/* Responsive styles for screen sizes up to 768px (e.g., smartphones) */
+@media (max-width: 768px) {
+  .contacts {
+    display: block;
+  }
+
+  .contact {
+    margin-bottom: 20px;
+  }
+
+  .chat {
+    margin-top: 20px;
+  }
+
+  .input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .input input {
+    flex: 1;
+  }
+}
+
+

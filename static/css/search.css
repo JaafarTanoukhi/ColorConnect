@@ -56,10 +56,14 @@
     height:fit-content;
     max-height: 80vh;
     padding:20px;
-    overflow-y:hidden;
+    overflow-y:scroll;
     background-color: white;
     z-index: -100;
     
+}
+
+#cards-container::-webkit-scrollbar{
+  display: none;
 }
 
 .card-group{

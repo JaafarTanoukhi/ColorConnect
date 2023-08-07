@@ -139,6 +139,7 @@ with it curves*/
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s;
 }.toggle::before{
     content: '';
     position: absolute;
@@ -163,4 +164,8 @@ with it curves*/
 
 }.toggle.h-active::after{
     transform: translateY(0px) rotate(-45deg); 
+}
+
+.toggle:hover{
+    background-color:white;
 }
