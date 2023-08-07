@@ -1,0 +1,180 @@
+#home-title {
+    background-color: red;
+    height: 5rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: 5rem;
+}
+
+#home-container {
+    display: flex;
+    background-color: black;
+}
+
+#posts {
+    position: relative;
+    background-color: yellow;
+    height: 90vh;
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y:scroll;
+    scroll-snap-type:y mandatory;
+}
+
+#arrow-down {
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    width: 50px;
+    height: 50px;
+}
+
+#arrow-up {
+    position: absolute;
+    right: 2%;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+}
+
+#stories {
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    height: 50vh;
+    width: 40%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-y:hidden;
+}
+
+#arrow-left {
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    left:1%;
+}
+
+#arrow-right {
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:50%;
+    right:1%;
+}
+
+.post {
+    scroll-snap-align: center;
+    margin-top: 6vh;
+    margin-bottom:6vh;
+    flex:0 0 auto;
+    width: 80%;
+    height: 80%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-account-info {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
+
+.p-account-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.p-account-name {
+    width: 50%;
+    height: 100px;
+    background-color: red;
+}
+
+.image {
+    width: 90%;
+    height: 70%;
+    background-color: purple;
+    align-self: center;
+}
+
+.actions {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.action-button {
+    width: 50px;
+    height: 50px;
+}
+
+.like-comment-container {
+    display: flex;
+}
+
+.caption {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    height: 50px;
+}
+
+.story{
+    flex:0 0 auto;
+    scroll-snap-align: center;
+    background-color: purple;
+    width:100%;
+    height:100%;
+}
+
+.s-account-info{
+    display:flex;
+   height:75px;
+   background-color: black;
+}
+
+.s-account-image{
+    width:75px;
+    height:75px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.s-account-name{
+    width:50%;
+    height:75px;
+    background-color: blue;
+}
+
+.story-image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    background-color: grey;
+}
+
+.story-like{
+    margin-bottom: 20px;
+}
+
+
