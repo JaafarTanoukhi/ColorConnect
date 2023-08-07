@@ -83,7 +83,7 @@
     cursor: pointer;
     background: white;
     box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 2rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
-    transition: transform 500ms;
+    transition: transform 1000ms;
   }
   .contacts h2 {
     margin: 0.5rem 0 1.5rem 5rem;
@@ -101,7 +101,7 @@
     margin: 0;
   }
   .contacts:hover {
-    transform: translate(23rem, -50%);
+    transform: translate(20rem, -50%);
   }
   
 
@@ -277,7 +277,7 @@
   /* Base styles for all screen sizes */
 
 
-/* Responsive styles for screen sizes up to 768px (e.g., smartphones) */
+/* Responsive styles for screen sizes up to 768px (e.g., smartphones) 
 @media (max-width: 768px) {
   .contacts {
     display: block;
@@ -301,5 +301,199 @@
     flex: 1;
   }
 }
+*/
 
 
+
+
+
+
+
+
+/*SIZE CHANGE FOR ALL MEDIAS*/
+
+@media all and (max-width: 1450px){
+
+  .chat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40rem;
+    height: 40rem;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+  }
+
+  .center {
+    position: absolute;
+    top: 48%;
+    left: calc(37% + 12rem);
+    transform: translate(-50%, -50%);
+  }
+
+
+}
+
+@media all and (max-width: 1000px){
+
+  .chat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30rem;
+    height: 40rem;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+  }
+
+  .center {
+    position: absolute;
+    top: 48%;
+    left: calc(30% + 12rem);
+    transform: translate(-50%, -50%);
+  }
+
+  .toggle{
+    display: none;
+  }
+
+  .contacts {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(4.5rem, -50%);
+    width: 20rem;
+    height: 32rem;
+    padding: 1rem 2rem 1rem 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 2rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+    transition: transform 1000ms;
+  }
+
+  .contacts:hover {
+    transform: translate(13rem, -50%);
+  }
+
+  .h-navigation.h-active{
+    width: 80px;
+  }
+  
+
+
+}
+
+@media all and (max-width: 700px){
+
+  .chat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20rem;
+    height: 30rem;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+  }
+
+  .center {
+    position: absolute;
+    top: 60%;
+    left: calc(20% + 12rem);
+    transform: translate(-50%, -50%);
+  }
+
+  .contacts {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    transform: translate(-1.2rem, -50%);
+    width: 18rem;
+    height: 22rem;
+    padding: 1rem 2rem 1rem 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 2rem 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+    transition: transform 1000ms;
+    overflow: auto;
+    max-height: 100vh;
+  }
+  .contacts::-webkit-scrollbar{
+    display: none;
+  }
+
+  .contacts:hover {
+    transform: translate(-1.2rem, -70%);
+  }
+
+ .contacts .fa-bars {
+    position: absolute;
+    right: 0.25rem;
+    color: #0fc70f;
+    transition: color 200ms;
+  }
+
+  .contacts h2 {
+    margin: 0.5rem 0 1.5rem 2rem;
+  }
+
+  .contact {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact .mnpc {
+    position: absolute;
+    left: 0;
+    margin-left: 200px;
+  }.mnpc {
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  .chat .input input {
+    border: none;
+    background-image: none;
+    background-color: white;
+    padding: 0.2rem 0.5rem;
+    margin-right: 0.1rem;
+    border-radius: 1.125rem;
+    flex-grow: 2;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1), 0rem 1rem 1rem -1rem rgba(0, 0, 0, 0.2);
+    font-family: Red hat Display, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+  }
+
+  .toggle{
+  display: none;
+}
+
+.h-navigation.h-active{
+  width: 80px;
+}
+
+}

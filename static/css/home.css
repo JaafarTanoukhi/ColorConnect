@@ -3,6 +3,20 @@
     margin-top: 2rem;
     color: black;
     font-size: 5rem;
+    white-space: nowrap;
+    margin-left: 30px;
+}
+.redti{
+    color: red;
+}
+.orangeti{
+    color: #ffa117;
+}
+.greenti{
+    color: #0fc70f;
+}
+.blueti{
+    color: #2196f3;
 }
 
 #home-container {
@@ -81,6 +95,7 @@
     background-image:url(../images/9.png);
     margin:10px 0 10px 10px;
     background-size: cover;
+    white-space: nowrap;
     
 }
 
@@ -91,13 +106,13 @@
     width: 50%;
     height: 100px;
     font-size: 2rem;
+    
 }
 
 .image {
     width: 90%;
     height: 70%;
     align-self: center;
-    background-image: url(../images/8.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -135,11 +150,12 @@
 .caption {
     display: flex;
     align-items: center;
+    padding: 20px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.5rem;
-    height: 50px;
+    height: 60px;
 }
 
 .story{
@@ -180,7 +196,9 @@
     width:50%;
     height:75px;
     font-size: 2rem;
-    margin-top: 30px;;
+    margin-top: 30px;
+    white-space: nowrap;
+
 }
 
 .story-image{
@@ -215,7 +233,111 @@
 }
 
 
-@media (max-width:500px){
 
+
+
+
+
+.insta-post {
+    height: auto;
+    border-radius: 20px;
+  }
+  .likes {
+    font-size: 1.5em;
+    margin-top: 8px;
+    color: #3a3a3a;
+  }
+  .heart-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 19px 38px rgba(0, 0, 0, 0.7));
+    transform-origin: center center;
+    width: 0;
+  }
+
+ 
+  /* Tap animation */
+  .animate-like {
+    animation: 2s animateLike ease-in-out forwards;
+  }
+  @keyframes animateLike {
+    0% {
+      width: 0;
+    }
+    5% {
+      width: 180px;
+    }
+    10% {
+      width: 150px;
+    }
+    20%,
+    35% {
+      width: 160px;
+    }
+    40%,
+    100% {
+      width: 0;
+    }
+  }
+  
+
+
+@media all and (max-width: 1600px){
+    .s-account-name{
+        width:50%;
+        height:75px;
+        font-size: 1.5rem;
+        margin-top: 30px;;
+    }
+    .caption {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-right: auto;
+        font-size: 1rem;
+        height: 50px;
+
+    }
+
+    
 }
+
+@media all and (max-width: 1000px){
+    #home-title {
+        height: 5rem;
+        margin-top: 2rem;
+        color: black;
+        font-size: 4rem;
+        white-space: nowrap;
+    }
+    .likes{
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 800px){
+    #home-title {
+        height: 5rem;
+        margin-top: 2rem;
+        color: black;
+        font-size: 3rem;
+        white-space: nowrap;
+    }
+}
+@media all and (max-width: 600px){
+    #home-title {
+        height: 5rem;
+        margin-top: 2rem;
+        color: black;
+        font-size: 2.5rem;
+        white-space: nowrap;
+    }
+}
+
+
 
