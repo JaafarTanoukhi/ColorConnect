@@ -42,6 +42,26 @@
             <div class="comments"></div>
         </div>
 
+        <div class="post">
+            <div class="p-account-info">
+                <div class="p-account-image"></div>
+                <div class="p-account-name">Andrew Tate</div>
+            </div>
+            <div class="image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
+                <img src="../images/8.png" alt="insta-post" class="insta-post"  style="width: 100%; height: 100%;"/>
+                
+            </div>
+            <div class="actions">
+                <div class="like-comment-container">
+                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button><p class="likes"></p>
+                    <button class="action-button comment"><ion-icon size="large" name="chatbox-outline"></ion-icon></button>
+                </div>
+                <button class="action-button share"><ion-icon size="large" name="share-outline"></ion-icon></button>
+            </div>
+            <div class="caption"><span style="width:50px;height:50px;" class="p-account-image"></span><span style="margin-left:5px">AndrewTate: greatest movie of all time.</span></div>
+            <div class="comments"></div>
+        </div>
 
         <div class="post">
             <div class="p-account-info">
@@ -51,27 +71,11 @@
             <div class="image">
                 <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
                 <img src="../images/8.png" alt="insta-post" class="insta-post"  style="width: 100%; height: 100%;"/>
+                
             </div>
             <div class="actions">
                 <div class="like-comment-container">
-                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
-                    <button class="action-button comment"><ion-icon size="large" name="chatbox-outline"></ion-icon></button>
-                </div>
-                <button class="action-button share"><ion-icon size="large" name="share-outline"></ion-icon></button>
-            </div>
-            <div class="caption"><span style="width:50px;height:50px;" class="p-account-image"></span><span style="margin-left:5px">AndrewTate: greatest movie of all time.</span></div>
-            <div class="comments"></div>
-        </div>
-
-        <div class="post">
-            <div class="p-account-info">
-                <div class="p-account-image"></div>
-                <div class="p-account-name">Andrew Tate</div>
-            </div>
-            <div class="image"></div>
-            <div class="actions">
-                <div class="like-comment-container">
-                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
+                    <button class="action-button like"><ion-icon size="large" name="heart-outline"></ion-icon></button><p class="likes"></p>
                     <button class="action-button comment"><ion-icon size="large" name="chatbox-outline"></ion-icon></button>
                 </div>
                 <button class="action-button share"><ion-icon size="large" name="share-outline"></ion-icon></button>
@@ -80,15 +84,18 @@
             <div class="comments"></div>
         </div>
     </div>
-    
+
+
+       
     <div id="stories-container">
-        <div id="stories">
+        <div class="stories">
             <div class="story">
                 <div class="s-account-info">
                     <div class="s-account-image"></div>
                 <div class="s-account-name">Mama-ima-criminal</div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
         </div>
@@ -98,6 +105,7 @@
                 <div class="s-account-name"></div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
         </div>
@@ -107,18 +115,20 @@
                 <div class="s-account-name"></div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
         </div>
     </div>
     
-    <div id="stories">
+    <div class="stories">
         <div class="story">
             <div class="s-account-info">
                 <div class="s-account-image"></div>
                 <div class="s-account-name">Mama-ima-criminal</div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
         </div>
@@ -128,6 +138,7 @@
                 <div class="s-account-name"></div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
         </div>
@@ -137,6 +148,7 @@
                 <div class="s-account-name"></div>
             </div>
             <div class="story-image">
+                <img src="../images/heartfull.png" alt="Heart icon" class="heart-icon" />
             </div>
             <button class="story-like"><ion-icon size="large" name="heart-outline"></ion-icon></button>
             </div>
@@ -146,25 +158,42 @@
 
 
 <script>
-    const post = document.querySelector(".post");
-const likesEl = document.querySelector(".likes");
-const heart = document.querySelector(".heart-icon");
+    const posts=document.querySelector('#posts');
+    
+    posts.addEventListener("dblclick", (e) => {
 
-likesEl.innerText = "There are no likes so far";
-
-let counter = 0;
-
-post.addEventListener("dblclick", (e) => {
-  counter++;
-
-
-  if (counter === 1) likesEl.innerText = counter + " like";
-  else likesEl.innerText = counter + " likes";
-
+    const post=e.target.closest('.post');
+    if(!post) return;
+    const likesEl=post.querySelector('.likes');
+    const heart=post.querySelector('.heart-icon');
+    const smallheart=post.querySelector('.like');
+    smallheart.classList.add('active');
+    console.log(heart);
+ 
+  likesEl.innerText = "1 like";
+  
   heart.classList.add("animate-like");
+  smallheart.style.color='red';
   setTimeout(() => {
     heart.classList.remove("animate-like");
   }, 800);
 });
+</script>
 
+<script>
+    const stories=document.getElementsByClassName('stories');
+    console.log(stories);
+    Array.from(stories).forEach(s=>{s.addEventListener("dblclick", (e) => {
+    const story=e.target.closest('.story');
+    if(!story) return;
+    const heart=story.querySelector('.heart-icon');
+    const smallheart=story.querySelector('.story-like');
+    smallheart.classList.add('active');
+    
+  heart.classList.add("animate-like");
+  smallheart.style.color='red';
+  setTimeout(() => {
+    heart.classList.remove("animate-like");
+  }, 800);
+})});
 </script>
